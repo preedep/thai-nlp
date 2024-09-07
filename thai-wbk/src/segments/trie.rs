@@ -17,7 +17,7 @@ impl TrieNode {
 }
 
 // Struct representing the Trie
-struct Trie {
+pub struct Trie {
     root: TrieNode,
 }
 
@@ -71,6 +71,17 @@ impl Trie {
             Some(all_matches)
         }
     }
+}
+pub fn load_dictionary_from_file(file_path: &str) -> Result<Trie, std::io::Error> {
+    let mut trie = Trie::new();
+
+    // Read the file and insert each word into the Trie
+    let lines = std::fs::read_to_string(file_path)?;
+    for line in lines.lines() {
+        trie.insert(line);
+    }
+
+    Ok(trie)
 }
 
 // Function to segment the Thai text using the Trie

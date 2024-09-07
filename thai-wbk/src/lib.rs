@@ -1,1 +1,1 @@
-pub mod trie;
+pub mod segments;

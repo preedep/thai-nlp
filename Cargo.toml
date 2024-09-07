@@ -7,3 +7,4 @@ edition = "2021"
 members = ["thai-wbk"]
 
 [dependencies]
+thai-wbk = { path = "./thai-wbk" }
