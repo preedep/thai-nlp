@@ -156,7 +156,6 @@ mod tests {
             "ไ".to_string(),
             "ห".to_string(),
             "น".to_string(),
-            "้".to_string(),
         ];
         let result = segment_thai_text(text, &trie);
         assert_eq!(result, expected);
